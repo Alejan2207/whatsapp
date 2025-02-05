@@ -1,0 +1,145 @@
+// Contenedor general
+.profile-container {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    padding: 15px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  // Cabecera del perfil
+  .profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  // Avatar de perfil
+  .profile-avatar {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    overflow: hidden;
+  }
+  
+  // Estadísticas del perfil
+  .profile-stats {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stat-number {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .stat-label {
+    font-size: 12px;
+    color: #bbb;
+  }
+  
+  // Información del perfil
+  .profile-info {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .profile-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .profile-bio {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #ddd;
+  }
+  
+  // Botones de acción
+  .profile-actions {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .follow-btn,
+  .message-btn {
+    --border-radius: 8px;
+    --color: white;
+    --border-color: #555;
+    font-size: 13px;
+    padding: 5px 12px;
+  }
+  
+  .add-icon {
+    font-size: 20px;
+    color: #fff;
+    background-color: #222;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  
+  // Historias destacadas
+  .profile-stories {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .story {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid #444;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .story img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  // Segmento de navegación
+  .profile-segment {
+    margin-top: 15px;
+    background: transparent;
+    border-bottom: 1px solid #333;
+  }
+  
+  ion-segment-button {
+    --color-checked: white;
+    --color: #666;
+    --border-radius: 0;
+    padding: 10px;
+  }
+  
+  // Contenido de publicaciones
+  .profile-content {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .profile-content ion-icon {
+    font-size: 50px;
+    margin-top: 10px;
+    opacity: 0.5;
+  }
+  

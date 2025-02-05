@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <div slot="start" class="instagram-title">
+      Instagram
+    </div>
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+        <ion-icon name="heart-outline" size="large"></ion-icon>
+      </ion-button>
+      <ion-button color="dark">
+        <ion-icon name="paper-plane-outline" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="story-list">
+    <div class="scroll-horizontal">
+      <div class="scroll-item">
+        <ion-avatar class="avatar-md">
+          <img src="assets/images/teto.png">
+        </ion-avatar>
+        <div class="item-label text-muted">
+          Your Story
+        </div>
+      </div>
+
+      <div class="scroll-item" *ngFor="let user of users">
+        <div class="item-avatar">
+          <ion-avatar class="avatar-md has-update has-status">
+            <img [src]="user.avatar">
+          </ion-avatar>
+        </div>
+        <div class="item-label">
+          {{ user.name }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ion-card *ngFor="let post of post">
+    <ion-card-header>
+      <div class="header-content">
+        <ion-avatar class="avatar-sm">
+          <img [src]="post.avatar" size="large">
+        </ion-avatar>
+        <b>{{ post.name }}</b>
+        <ion-icon name="ellipsis-vertical" size="large"></ion-icon>
+      </div>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-img [src]="post.img"></ion-img>
+    </ion-card-content>
+
+    <ion-card-footer>
+      <div class="left-icons">
+        <ion-icon name="heart-outline" size="large"></ion-icon><b class="footer">{{ post.heart }}</b>
+        <ion-icon name="chatbubble-outline" size="large"></ion-icon><b class="footer">{{ post.comment }}</b>
+        <ion-icon name="paper-plane-outline" size="large"></ion-icon><b class="footer">{{ post.share }}</b>
+        <ion-icon name="cloud-outline" size="large"></ion-icon>
+      </div>
+      <ion-icon name="bookmark-outline" size="large"></ion-icon>
+    </ion-card-footer>
+    <div>
+      <b>{{post.description}}</b>
+    </div>
+    <ion-note>{{post.date}}</ion-note>
+  </ion-card>
+
+
+</ion-content>

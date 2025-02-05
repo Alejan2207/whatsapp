@@ -1,0 +1,27 @@
+<ion-content>
+  <div class="reels-container">
+    <ion-slides pager="true" [options]="slideOpts" (ionSlideDidChange)="slideChanged()">
+      <ion-slide *ngFor="let reel of reels">
+        <div class="reel-video">
+          <video #videoPlayer [src]="reel.video" playsinline (click)="togglePlay(videoPlayer)"></video>
+          <div class="reel-overlay">
+            <div class="reel-info">
+              <ion-avatar>
+                <img [src]="reel.avatar">
+              </ion-avatar>
+              <span class="username">{{ reel.username }}</span>
+              <ion-button fill="outline" size="small">Seguir</ion-button>
+            </div>
+            <div class="reel-actions">
+              <ion-icon name="heart-outline"></ion-icon>
+              <span>{{ reel.likes }}</span>
+              <ion-icon name="chatbubble-outline"></ion-icon>
+              <span>{{ reel.comments }}</span>
+              <ion-icon name="paper-plane-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

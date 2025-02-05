@@ -1,0 +1,62 @@
+<ion-content>
+  <div class="profile-container">
+    <!-- Cabecera del perfil -->
+    <div class="profile-header">
+      <ion-avatar class="profile-avatar">
+        <img src="assets/images/teto.png" alt="Profile Picture">
+      </ion-avatar>
+      <div class="profile-stats">
+        <div class="stat">
+          <span class="stat-number">0</span>
+          <span class="stat-label">Publicaciones</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">766</span>
+          <span class="stat-label">Seguidores</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">512</span>
+          <span class="stat-label">Seguidos</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Información del perfil -->
+    <div class="profile-info">
+      <h2 class="profile-name">Cami</h2>
+      <p class="profile-bio">!!♡!! <br> 「 harrystyles 」</p>
+    </div>
+
+    <!-- Acciones (Seguir, Mensaje, Añadir) -->
+    <div class="profile-actions">
+      <ion-button fill="outline" class="follow-btn">Siguiendo</ion-button>
+      <ion-button fill="outline" class="message-btn">Mensaje</ion-button>
+      <ion-icon name="person-add-outline" class="add-icon"></ion-icon>
+    </div>
+
+    <!-- Historias destacadas -->
+    <div class="profile-stories">
+      <div class="story" *ngFor="let story of stories">
+        <ion-avatar>
+          <img [src]="story.image" alt="Story">
+        </ion-avatar>
+      </div>
+    </div>
+
+    <!-- Segmento de navegación -->
+    <ion-segment class="profile-segment">
+      <ion-segment-button value="posts">
+        <ion-icon name="grid-outline"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="tagged">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+
+    <!-- Contenido de publicaciones -->
+    <div class="profile-content">
+      <ion-icon name="camera-outline"></ion-icon>
+      <p>Aún no hay publicaciones</p>
+    </div>
+  </div>
+</ion-content>
